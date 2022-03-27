@@ -28,34 +28,28 @@
         let computerSelection=computerPlay();
         //player chooses rock//
         if ((playerSelection==="Rock")&&(computerSelection==="Paper")) {
-            console.log ("You lose,Paper beats Rock!"); 
-            computerScore+=1;
+            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You lose,Paper beats Rock! Computer Total Points: ${computerScore+=1} point(s).`); 
           }
         else if ((playerSelection==="Rock")&&(computerSelection==="Scissors")) {
-            console.log ("You win,Rock beats Scissors!");
-            playerScore+=1;
+            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You win,Rock beats Scissors! Player Total Points: ${playerScore+=1} point(s).`);
           }
         //player chooses scissors//
         if ((playerSelection==="Scissors")&&(computerSelection==="Rock")) {
-            console.log ("You lose,Rock beats Scissors!");
-            computerScore+=1;
+            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You lose,Rock beats Scissors! Computer Total Points: ${computerScore+=1} point(s).`);
           }
         else if ((playerSelection==="Scissors")&&(computerSelection==="Paper")) {
-            console.log ("You win, Scissors beats paper!");
-            playerScore+=1;
+            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You win, Scissors beats paper! Player Total Points: ${playerScore+=1} point(s).`)
           }
         //player chooses paper//
         if ((playerSelection==="Paper")&&(computerSelection==="Scissors")) {
-            console.log ("You lose,Scissors beats Paper!");
-            computerScore+=1;
+            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You lose,Scissors beats Paper! Computer Total Points: ${computerScore+=1} point(s).`);
           }
         else if ((playerSelection==="Paper")&&(computerSelection==="Rock")) {
-            console.log ("You win, Paper beats Rock!");
-            playerScore+=1;
+            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You win, Paper beats Rock! Player Total Points: ${playerScore+=1} point(s).`);
           }
         //case of ties//
         else if (playerSelection===computerSelection){
-            console.log ("Its a tie!")
+            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}. Its a tie! No one gets points`)
           }
         }
 
