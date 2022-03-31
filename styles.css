@@ -1,0 +1,24 @@
+.container-one{
+    display:flex;
+    justify-content: space-around;
+    padding-top:30px;
+    padding-bottom:50px;
+}
+
+.text {
+    font-family: monospace;
+    font-weight: 400;
+    font-size: large;
+}
+
+p {
+    font-family: monospace;
+    font-weight: 800;
+    font-size: large;
+}
+
+button{
+    padding:20px;
+    border-radius: 25px;
+    border-color:black;
+}
