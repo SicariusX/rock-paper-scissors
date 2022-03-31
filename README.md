@@ -1,3 +1,3 @@
 # rock-paper-scissors
 
-Rock Paper Scissors game using console.log to print outcomes. First project that heavily utilises functions and conditionals. 
+Classic game letting the player to play against the computer. First project that heavily utilises functions, conditionals and DOM manipulation. 
