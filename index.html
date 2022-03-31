@@ -5,76 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
+    <script src="js-file.js" defer> </script> 
 </head>
+
 <body>
-    
-    <script>
-        
-         function computerPlay() {   //see stack overflow, "How do you select a random variable within a function in JavaScript?"
-            let choices=["Rock","Paper","Scissors"]; 
-            return choices[Math.floor(Math.random()*choices.length)]
-        }
-      
-         function playerSelectionLoop() { 
-         let playerPrompt=prompt(`choose "Rock","Paper" or "Scissors"`);
-         return playerPrompt;        //return as a way to record the results
-        }
- 
-        let playerScore=0;
-        let computerScore=0;
+    <button class="Rock">Rock</button>
+    <button class="Paper">Paper</button>
+    <button class="Scissors">Scissors</button>
 
-        function playRound() {
-        let playerSelection=playerSelectionLoop(); //bind how each side plays with a variable and further explain the game outcomes using the variable
-        let computerSelection=computerPlay();
-        //player chooses rock//
-        if ((playerSelection==="Rock")&&(computerSelection==="Paper")) {
-            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You lose,Paper beats Rock! Computer Total Points: ${computerScore+=1} point(s).`); 
-          }
-        else if ((playerSelection==="Rock")&&(computerSelection==="Scissors")) {
-            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You win,Rock beats Scissors! Player Total Points: ${playerScore+=1} point(s).`);
-          }
-        //player chooses scissors//
-        if ((playerSelection==="Scissors")&&(computerSelection==="Rock")) {
-            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You lose,Rock beats Scissors! Computer Total Points: ${computerScore+=1} point(s).`);
-          }
-        else if ((playerSelection==="Scissors")&&(computerSelection==="Paper")) {
-            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You win, Scissors beats paper! Player Total Points: ${playerScore+=1} point(s).`)
-          }
-        //player chooses paper//
-        if ((playerSelection==="Paper")&&(computerSelection==="Scissors")) {
-            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You lose,Scissors beats Paper! Computer Total Points: ${computerScore+=1} point(s).`);
-          }
-        else if ((playerSelection==="Paper")&&(computerSelection==="Rock")) {
-            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}.You win, Paper beats Rock! Player Total Points: ${playerScore+=1} point(s).`);
-          }
-        //case of ties//
-        else if (playerSelection===computerSelection){
-            console.log (`You chose ${playerSelection} and Computer chose ${computerSelection}. Its a tie! No one gets points`)
-          }
-        }
 
-        //to loop the game 5 times//
-        function game() {
-        for (let i=0; i<5; i++) {
-           playRound();
-          }
-        }
+    <div></div>
 
-        game();
-
-        if (playerScore>computerScore){
-        console.log("Player won overall!");
-        }
-
-        if (computerScore>playerScore) {
-        console.log("Computer won overall!");
-        }
-
-        if (playerScore===computerScore) {
-        console.log("It's a tie overall!");
-        }
-
-    </script>
+    <p class="PlayerScore">Player Score:</p>
+    <p>Computer Score:</p>
 
 </body>
 </html>
